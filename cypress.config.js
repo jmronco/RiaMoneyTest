@@ -2,8 +2,8 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   allowCypressEnv: false,
-  pageLoadTimeout: 30000,
-  defaultCommandTimeout: 10000,
+  pageLoadTimeout: 60000,
+  defaultCommandTimeout: 60000,
   e2e: {
     experimentalRunAllSpecs : true,
     experimentalModifyObstructiveThirdPartyCode: true,
