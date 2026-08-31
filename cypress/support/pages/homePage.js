@@ -27,7 +27,7 @@ class HomePage{
         cy.get('input[id="amount-from"]', {timeout: 15000}).should('be.visible');
         cy.get('nav', { timeout: 15000 }).should('be.visible');
         //Check if the website is correct
-        cy.url({ timeout: 10000 }).should('include', constants.BASE_URL);
+        cy.window({ timeout: 10000 }).its('location.href').should('include', constants.BASE_URL);
         //Check if the page title contains Ria Money Transfer
         cy.document({ timeout: 15000 }).its('title').should('include', constants.PAGE_TITLE);
         return this;
